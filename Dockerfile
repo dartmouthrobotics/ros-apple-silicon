@@ -49,7 +49,19 @@ RUN apt -y update && '2' | apt install -y \
   ros-melodic-interactive-markers \
   ros-melodic-turtlebot3-gazebo \
   ros-melodic-stage \
-  ros-melodic-stage-ros
+  ros-melodic-stage-ros \
+  ros-melodic-geographic-msgs \
+  ros-melodic-rospy-message-converter \
+  ros-melodic-mavros \
+  ros-melodic-mavros-extras \
+  ros-cmake-modules # TODO
+RUN apt-get install python-tk \
+    bash-completion \
+    python-pip -y
+RUN pip install --upgrade pip
+RUN pip install shapely==1.7.0 \
+    python-intervals \
+    multipledispatch==0.6.0 
 
 # environment setup (add to .bashrc)
 RUN mkdir -p /root/catkin_ws
