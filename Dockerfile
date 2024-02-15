@@ -61,7 +61,8 @@ RUN apt-get install python-tk \
 RUN pip install --upgrade pip
 RUN pip install shapely==1.7.0 \
     python-intervals \
-    multipledispatch==0.6.0 
+    multipledispatch==0.6.0 \
+    matplotlib
 
 # environment setup (add to .bashrc)
 RUN mkdir -p /root/catkin_ws
